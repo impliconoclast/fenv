@@ -42,6 +42,9 @@ const (
 	FE_TOWARDZERO = C.FE_TOWARDZERO
 )
 
+// We couldn't use directly macro FE_DEL_ENV becuase of the issue for
+// https://github.com/golang/go/issues/10715.
+
 var FE_DFT_ENV = (*FEnv)(C.wrap_FE_DFL_ENV())
 
 /* Floating-point exceptions */
